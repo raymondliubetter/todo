@@ -1,0 +1,63 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.body {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  // background: #f1f1f1;
+  .add_todo {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    a.btn {
+      color: white;
+      width: 100%;
+    }
+  }
+
+  .redo_step {
+    color: red;
+  }
+
+  div.title {
+    font-size: 17px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc;
+    .date {
+      font-size: 13px;
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  ul.todo-list li.todo-item {
+    padding: 20px 40px;
+    margin: 30px 0;
+    // background: orange;
+    // background: #f1f1f1;
+    list-style-type: none;
+  }
+}
+
+div.title {
+  width: 100%;
+  background: #f1f1f1;
+  margin: 0;
+  div {
+    font-size: 13px;
+    width: 980px;
+    padding: 10px 80px;
+    margin-left: auto;
+    margin-right: auto;
+    .user {
+      margin-left: 600px;
+    }
+  }
+}
+
+// li.todo-item:nth-child(even) {background: #f1f1f1;}
+// li.todo-item:nth-child(odd)  {background: #1f1f1f;}

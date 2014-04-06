@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todos 待办事项</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class='title'>
+    <div>
+      <span>
+        <i class="icon-list"></i>待办事项
+      </span>
+      <span class="user">
+        <% if user_signed_in? %>
+          <i class="icon-user">
+            <%= current_user.email %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          </i>
+        <% else %>
+          <i class="icon-user">
+            <%= link_to "Sign in", new_user_session_path %>
+          </i>
+        <% end %>
+      <span>
+    </div>
+  </div>
+  <div class='body'>
+    <%= yield %>
+  </div>
+  <div class='sidebar'>
+    <% Tag.all.each do |tag| %>
+      <span class="label label-info">
+        <%= link_to tag.name, tag %>
+      </span>
+    <% end %>
+  </div>
+  <%= yield :javascripts %>
+</body>
+</html>
